@@ -1,0 +1,259 @@
+/* ============================================
+   JUTHOOR TUFT — ANIMATIONS
+   ============================================ */
+
+/* --- Loading keyframes --- */
+@keyframes drawYarn {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes loadingFadeIn {
+  to { opacity: 1; }
+}
+@keyframes loadingLogoIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes loadingFadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; pointer-events: none; }
+}
+
+/* --- Cursor --- */
+@keyframes yarnSpin {
+  to { rotate: 360deg; }
+}
+
+/* --- Hero logo float --- */
+@keyframes heroLogoFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* --- Scroll hint pulse --- */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.6; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.1); }
+}
+
+/* --- Background blobs --- */
+@keyframes blobFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-30px, 20px) scale(1.05); }
+  66%       { transform: translate(20px, -15px) scale(0.96); }
+}
+@keyframes blobFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(25px, -20px) scale(1.04); }
+  70%       { transform: translate(-15px, 10px) scale(0.97); }
+}
+@keyframes blobFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  30%       { transform: translate(10px, 25px) scale(1.06); }
+  60%       { transform: translate(-20px, -10px) scale(0.95); }
+}
+
+/* --- Yarn float (background decorations) --- */
+@keyframes yarnDrift {
+  0%, 100% { transform: translateY(0) rotate(0deg) scaleX(1); opacity: 0.06; }
+  25%       { transform: translateY(-30px) rotate(5deg) scaleX(1.1); opacity: 0.09; }
+  75%       { transform: translateY(20px) rotate(-4deg) scaleX(0.9); opacity: 0.04; }
+}
+
+/* --- About decorations float --- */
+@keyframes floatCircle {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(-10px, -15px) scale(1.1); }
+}
+@keyframes floatDot {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(8px, 12px); }
+}
+
+/* --- Process step icon pulse --- */
+@keyframes iconPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212,150,124,0.2); }
+  50%       { box-shadow: 0 0 0 10px rgba(212,150,124,0); }
+}
+.process-step:hover .step-icon { animation: iconPulse 1.5s ease infinite; }
+
+/* --- Product card art shimmer on hover --- */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.product-card:hover .product-card-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.05) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease infinite;
+  pointer-events: none;
+}
+
+/* --- Stat counter pop --- */
+@keyframes statPop {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.stat-item.counting .stat-number { animation: statPop 0.5s ease forwards; }
+
+/* --- Scroll progress bar glow --- */
+@keyframes progressGlow {
+  0%, 100% { box-shadow: 0 0 4px rgba(193,127,94,0.4); }
+  50%       { box-shadow: 0 0 8px rgba(193,127,94,0.7); }
+}
+.progress-bar { animation: progressGlow 3s ease-in-out infinite; }
+
+/* --- Button hover ripple --- */
+.btn-primary, .btn-ghost {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after, .btn-ghost::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+.btn-primary:hover::after, .btn-ghost:hover::after {
+  width: 200px; height: 200px;
+  opacity: 1;
+}
+
+/* --- Masonry item reveal --- */
+@keyframes masonryReveal {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.masonry-item {
+  animation: masonryReveal 0.6s cubic-bezier(0.25,0.46,0.45,0.94) both;
+}
+.masonry-item:nth-child(2) { animation-delay: 0.05s; }
+.masonry-item:nth-child(3) { animation-delay: 0.1s; }
+.masonry-item:nth-child(4) { animation-delay: 0.15s; }
+.masonry-item:nth-child(5) { animation-delay: 0.2s; }
+.masonry-item:nth-child(6) { animation-delay: 0.25s; }
+.masonry-item:nth-child(7) { animation-delay: 0.3s; }
+.masonry-item:nth-child(8) { animation-delay: 0.35s; }
+
+/* --- Filter btn transition --- */
+@keyframes filterPop {
+  0%   { transform: scale(0.95); }
+  50%  { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+.filter-btn.active { animation: filterPop 0.3s ease forwards; }
+
+/* --- Product grid item stagger (JS adds class) --- */
+.product-card { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.5s ease; }
+.product-card.visible { opacity: 1; transform: translateY(0); }
+
+/* --- FAQ answer transition --- */
+.faq-item .faq-answer { transition: max-height 0.45s cubic-bezier(0.25,0.46,0.45,0.94), padding 0.3s ease; }
+
+/* --- Testimonial slide --- */
+@keyframes testimonialIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Navbar items stagger on load --- */
+@keyframes navItemIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nav-links a {
+  animation: navItemIn 0.5s ease both;
+}
+.nav-links li:nth-child(1) a { animation-delay: 0.1s; }
+.nav-links li:nth-child(2) a { animation-delay: 0.15s; }
+.nav-links li:nth-child(3) a { animation-delay: 0.2s; }
+.nav-links li:nth-child(4) a { animation-delay: 0.25s; }
+.nav-links li:nth-child(5) a { animation-delay: 0.3s; }
+.nav-links li:nth-child(6) a { animation-delay: 0.35s; }
+.nav-links li:nth-child(7) a { animation-delay: 0.4s; }
+
+/* --- Hero content entrance --- */
+@keyframes heroContentIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-logo-large {
+  animation: heroContentIn 1s ease 1.8s both;
+}
+.hero-title {
+  animation: heroContentIn 1s ease 2s both;
+}
+.hero-subtitle-ar {
+  animation: heroContentIn 1s ease 2.15s both;
+}
+.hero-buttons {
+  animation: heroContentIn 1s ease 2.3s both;
+}
+.hero-scroll-hint {
+  animation: heroContentIn 1s ease 2.5s both;
+}
+
+/* --- Process step stagger --- */
+.process-step[data-step="1"] { animation-delay: 0s; }
+.process-step[data-step="2"] { animation-delay: 0.08s; }
+.process-step[data-step="3"] { animation-delay: 0.16s; }
+.process-step[data-step="4"] { animation-delay: 0.24s; }
+.process-step[data-step="5"] { animation-delay: 0.32s; }
+.process-step[data-step="6"] { animation-delay: 0.40s; }
+.process-step[data-step="7"] { animation-delay: 0.48s; }
+.process-step[data-step="8"] { animation-delay: 0.56s; }
+
+/* --- Popup open animation --- */
+@keyframes popupIn {
+  from { opacity: 0; transform: scale(0.88) translateY(30px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.product-popup-overlay.open .product-popup {
+  animation: popupIn 0.4s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+}
+
+/* --- Shape preview morph --- */
+@keyframes previewMorph {
+  from { opacity: 0.6; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+#rug-preview-svg { animation: previewMorph 0.3s ease; }
+#rug-preview-svg.morphing { animation: previewMorph 0.3s ease; }
+
+/* --- Section entrance (JS triggers) --- */
+.section-header .section-label { transition-delay: 0s; }
+.section-header .section-title { transition-delay: 0.1s; }
+.section-header .section-desc { transition-delay: 0.2s; }
+
+/* --- Yarn thread in about section background --- */
+@keyframes yarnWave {
+  0%, 100% { d: path("M 0 50 Q 100 30 200 50 Q 300 70 400 50"); }
+  50%       { d: path("M 0 50 Q 100 70 200 50 Q 300 30 400 50"); }
+}
+
+/* --- Smooth filter transition for products --- */
+.product-card.filtering-out {
+  animation: filterOut 0.3s ease forwards;
+}
+@keyframes filterOut {
+  to { opacity: 0; transform: scale(0.95) translateY(-10px); }
+}
+.product-card.filtering-in {
+  animation: filterIn 0.4s ease forwards;
+}
+@keyframes filterIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
