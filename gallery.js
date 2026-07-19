@@ -4,18 +4,18 @@
 
 // Gallery items — SVG rug art with varied heights for masonry
 const galleryItems = [
-  { id: 'g1', shape: 'runner',   ar: 2.75, bands: ['#3A3838','#5A6E3A','#3D5830','#C17F5E','#A03828','#D4967C'], fringe: true },
-  { id: 'g2', shape: 'wide',     ar: 0.55, bands: ['#F2EDE4','#1A1A1A','#A03828','#C1502A','#D4A830','#5A6E3A','#4A7898'], fringe: false },
-  { id: 'g3', shape: 'organic',  ar: 3.2,  bands: ['#A03828','#C1502A','#D4967C','#4A7898','#3D5830','#5A7868'], fringe: true },
-  { id: 'g4', shape: 'wide',     ar: 1.0,  bands: ['#C17F5E','#D4967C','#A03828','#D4A830','#3D5830'], fringe: false },
-  { id: 'g5', shape: 'runner',   ar: 2.4,  bands: ['#2C3E6B','#4A7898','#7A9CB5','#C17F5E','#D4967C'], fringe: true },
-  { id: 'g6', shape: 'organic',  ar: 2.9,  bands: ['#3D5830','#5A6E3A','#7A8C4A','#C17F5E','#D4967C'], fringe: true },
-  { id: 'g7', shape: 'wide',     ar: 1.6,  bands: ['#F2EDE4','#D4967C','#C17F5E','#C1502A','#D4A830'], fringe: false },
-  { id: 'g8', shape: 'runner',   ar: 3.5,  bands: ['#A03828','#C1502A','#D4A830','#5A6E3A','#4A7898','#2C3E6B'], fringe: true },
-  { id: 'g9', shape: 'wide',     ar: 0.7,  bands: ['#3A3838','#5A6E3A','#C17F5E','#D4A830','#F2EDE4'], fringe: false },
-  { id: 'g10', shape: 'organic', ar: 2.2,  bands: ['#C17F5E','#5A6E3A','#4A7898','#D4A830','#A03828','#3A3838','#D4967C'], fringe: true },
-  { id: 'g11', shape: 'wide',    ar: 1.2,  bands: ['#D4C5A9','#C9B99A','#B5A88A','#8A8078','#3A3835'], fringe: false },
-  { id: 'g12', shape: 'runner',  ar: 2.0,  bands: ['#3A3838','#A03828','#C17F5E','#D4967C','#F2EDE4'], fringe: true },
+  { id: 'g1',  img: 'https://images.unsplash.com/photo-1676557078316-eb85791d3cb0?w=800&q=80&fit=crop' },
+  { id: 'g2',  img: 'https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=800&q=80&fit=crop' },
+  { id: 'g3',  img: 'https://images.unsplash.com/photo-1680633480092-fe3d1c0a164a?w=800&q=80&fit=crop' },
+  { id: 'g4',  img: 'https://images.unsplash.com/photo-1756361771374-8796aab066da?w=800&q=80&fit=crop' },
+  { id: 'g5',  img: 'https://images.unsplash.com/photo-1580661485007-c7d629416f73?w=800&q=80&fit=crop' },
+  { id: 'g6',  img: 'https://images.unsplash.com/photo-1565508644803-61d8ea2795b7?w=800&q=80&fit=crop' },
+  { id: 'g7',  img: 'https://images.unsplash.com/photo-1765802536365-e2267a489a2c?w=800&q=80&fit=crop' },
+  { id: 'g8',  img: 'https://images.unsplash.com/photo-1700606874696-9974eb24ff5a?w=800&q=80&fit=crop' },
+  { id: 'g9',  img: 'https://images.unsplash.com/photo-1726208209286-cd879d9c1415?w=800&q=80&fit=crop' },
+  { id: 'g10', img: 'https://images.unsplash.com/photo-1770545289310-d5bf9bfb4045?w=800&q=80&fit=crop' },
+  { id: 'g11', img: 'https://images.unsplash.com/photo-1774505841514-264b1d2f69a2?w=800&q=80&fit=crop' },
+  { id: 'g12', img: 'https://images.unsplash.com/photo-1550376026-7375b92bb318?w=800&q=80&fit=crop' },
 ];
 
 // Reuse the SVG generator from products.js
@@ -80,7 +80,7 @@ function renderGallery() {
     div.className = 'masonry-item';
     div.dataset.idx = idx;
     div.innerHTML = `
-      ${makeGallerySVG(item)}
+      <img src="${item.img}" alt="Gallery ${idx + 1}" style="width:100%;display:block;" loading="lazy">
       <div class="masonry-overlay">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -107,7 +107,7 @@ function updateLightboxImage() {
   if (!item) return;
   wrap.style.transform = 'scale(0.92)';
   setTimeout(() => {
-    wrap.innerHTML = makeGallerySVG({ ...item, id: `lb-${item.id}` });
+    wrap.innerHTML = `<img src="${item.img}" alt="Gallery ${lightboxIndex + 1}" style="width:100%;max-height:85vh;object-fit:contain;display:block;">`;
     wrap.style.transform = 'scale(1)';
     wrap.style.transition = 'transform 0.3s ease';
     setTimeout(() => { wrap.style.transition = ''; }, 350);

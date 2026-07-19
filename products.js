@@ -99,6 +99,11 @@ const products = [
     care: 'Spot clean. Dry flat. Avoid direct sunlight.',
     hasFringe: true,
     tags: ['wall', 'landscape', 'modern'],
+    images: [
+      'https://images.unsplash.com/photo-1676557078316-eb85791d3cb0?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1628006025173-7c5558fa97c1?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1580661485007-c7d629416f73?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'runner', aspectRatio: 2.75, bands: ['#3A3838','#5A6E3A','#3D5830','#8B6B4A','#C17F5E','#A03828','#D4967C'] }
   },
   {
@@ -118,6 +123,11 @@ const products = [
     care: 'Vacuum weekly. Professional clean annually.',
     hasFringe: false,
     tags: ['floor', 'landscape', 'modern'],
+    images: [
+      'https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1680633480092-fe3d1c0a164a?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1700606874696-9974eb24ff5a?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'wide', aspectRatio: 0.45, bands: ['#D4C5A9','#1A1A1A','#A03828','#C1502A','#D4A830','#5A6E3A','#4A7898'] }
   },
   {
@@ -137,6 +147,11 @@ const products = [
     care: 'Spot clean. Do not soak.',
     hasFringe: true,
     tags: ['wall', 'landscape', 'modern'],
+    images: [
+      'https://images.unsplash.com/photo-1580661485007-c7d629416f73?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1713666122130-ec1cd50ff9f3?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1592914486106-fa452cfc092c?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'organic', aspectRatio: 3.5, bands: ['#A03828','#C1502A','#D4967C','#4A7898','#5A7898','#3D5830','#5A7868','#8A9C7A'] }
   },
   {
@@ -156,6 +171,11 @@ const products = [
     care: 'Vacuum gently. Professional clean recommended.',
     hasFringe: false,
     tags: ['floor', 'modern'],
+    images: [
+      'https://images.unsplash.com/photo-1680633480092-fe3d1c0a164a?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1756361771374-8796aab066da?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1705872534477-1fe2192e9b3d?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'wide', aspectRatio: 1, bands: ['#C17F5E','#D4967C','#A03828','#B85C38','#D4A830','#3D5830'] }
   },
   {
@@ -175,6 +195,11 @@ const products = [
     care: 'Spot clean only. Keep away from moisture.',
     hasFringe: true,
     tags: ['wall', 'minimal', 'modern'],
+    images: [
+      'https://images.unsplash.com/photo-1765802536365-e2267a489a2c?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1726208209286-cd879d9c1415?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1770545289310-d5bf9bfb4045?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'runner', aspectRatio: 2.4, bands: ['#2C3E6B','#4A7898','#5A8FAA','#7A9CB5','#A8BECC','#C17F5E','#D4967C'] }
   },
   {
@@ -194,6 +219,11 @@ const products = [
     care: 'Spot clean. Hang or store flat.',
     hasFringe: true,
     tags: ['wall', 'landscape'],
+    images: [
+      'https://images.unsplash.com/photo-1756361771374-8796aab066da?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1705872534477-1fe2192e9b3d?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1565508644803-61d8ea2795b7?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'organic', aspectRatio: 2.9, bands: ['#3D5830','#4A6B3C','#5A6E3A','#7A8C4A','#8A9C5A','#C17F5E','#D4967C'] }
   },
   {
@@ -213,6 +243,11 @@ const products = [
     care: 'Vacuum regularly. Rotate occasionally.',
     hasFringe: false,
     tags: ['floor', 'modern', 'minimal'],
+    images: [
+      'https://images.unsplash.com/photo-1565508644803-61d8ea2795b7?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1705872534499-5f7ba5b1bfd6?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1565508429490-801f84fd4b4e?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'wide', aspectRatio: 1.6, bands: ['#F2EDE4','#D4967C','#C17F5E','#C1502A','#D4A830','#C17F5E'] }
   },
   {
@@ -232,6 +267,11 @@ const products = [
     care: 'Spot clean. Machine wash cover only.',
     hasFringe: false,
     tags: ['floor', 'kids'],
+    images: [
+      'https://images.unsplash.com/photo-1705872534477-1fe2192e9b3d?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1749451450161-b9392f26ef2a?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1539285647774-95ce954f7f50?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'wide', aspectRatio: 1.5, bands: ['#F2EDE4','#4A7898','#D4A830','#5A6E3A','#D4967C','#C17F5E'] }
   },
   {
@@ -251,6 +291,11 @@ const products = [
     care: 'Based on final design.',
     hasFringe: true,
     tags: ['floor', 'wall', 'custom'],
+    images: [
+      'https://images.unsplash.com/photo-1700606874696-9974eb24ff5a?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1768404817971-8c3a26d062bc?w=800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1747900849730-f8a8540a6f16?w=800&q=80&fit=crop'
+    ],
     svgConfig: { shape: 'organic', aspectRatio: 2.2, bands: ['#C17F5E','#5A6E3A','#4A7898','#D4A830','#A03828','#3A3838','#D4967C'] }
   }
 ];
@@ -262,7 +307,9 @@ let activeProductId = null;
 let activeImageIndex = 0;
 
 function getProductImages(p) {
-  // Generate 3 visual variants of the same rug for gallery
+  if (p.images && p.images.length) {
+    return p.images.map(src => `<img src="${src}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">`);
+  }
   const configs = [
     p.svgConfig,
     { ...p.svgConfig, bands: [...p.svgConfig.bands].reverse() },
@@ -300,7 +347,9 @@ function renderProducts() {
     card.style.transitionDelay = `${idx * 0.06}s`;
     card.dataset.id = p.id;
 
-    const svg = makeRugSVG({ id: `card-${p.id}`, ...p.svgConfig });
+    const cardImage = p.images && p.images.length
+      ? `<img src="${p.images[0]}" alt="${name}" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">`
+      : makeRugSVG({ id: `card-${p.id}`, ...p.svgConfig });
     const dotColors = p.colors.slice(0, 5).map(c =>
       `<span class="color-dot" style="background:${c}"></span>`
     ).join('');
@@ -311,7 +360,7 @@ function renderProducts() {
 
     card.innerHTML = `
       <div class="product-card-art">
-        ${svg}
+        ${cardImage}
         <span class="product-badge">${isAr ? 'مصنوع يدوياً' : 'Handmade'}</span>
       </div>
       <div class="product-card-info">
